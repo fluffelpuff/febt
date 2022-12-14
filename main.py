@@ -35,5 +35,12 @@ h = low.pop(0)
 m = low.pop(0)
 s = low.pop(0)
 
+# Die Einzelnen Werte werden in Bits umgewandelt
+bited_y = "{0:b}".format(int(y))
+bited_m = "{0:b}".format(int(m))
+bited_d = "{0:b}".format(int(d))
+bited_h = "{0:b}".format(int(h))
+bited_m = "{0:b}".format(int(m))
+bited_s = "{0:b}".format(int(s))
 
-print(y, m, d, h ,m, s)
+print(bited_y, bited_m, bited_d, bited_h ,bited_m, bited_s)
