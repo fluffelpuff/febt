@@ -1,10 +1,10 @@
 ```
-Jahr (3 Bytes = 16.777.216 Möglichkeiten)
-Monat (1 Byte = 256 Möglichkeiten)
-Tag (1 Byte = 256 Möglichkeiten)
-Stunde (1 Byte = 256 Möglichkeiten)
-Minute (1 Byte = 256 Möglichkeiten)
-Sekunde (1 Byte = 256 Möglichkeiten)
+Jahr = 3 Bytes
+Monat = 1 Byte
+Tag = 1 Byte
+Stunde = 1 Byte
+Minute = 1 Byte
+Sekunde = 1 Byte
 
 Auf Bit Ebene:
 Sekunde und Minute haben jeweils nur 60 Zahlen, heißt: da reichen 2*6 bit aus.
