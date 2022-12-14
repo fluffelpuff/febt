@@ -17,3 +17,23 @@ Nur Jahre gibt es unbegrenzt, deshalb an der Stelle 3*6 Bits.
 3 * 6 Bits = 2^(6*3) = 262.144 soviel Jahre ist es dann safe ohne angepasst zu werden.
 Die Angabe von Millisekunden ist nicht notwendig, da wir nur auf der Sekundenebene Arbeiten.
 '''
+
+import datetime
+
+
+# Die Aktuelle Uhrzeit wird als Datetime abgerufen
+now = datetime.datetime.now()
+
+# Der Datetime Wert wird Formatiert und gesplittet
+low = (now.strftime('%Y-%m-%d-%H-%M-%S')).split('-')
+
+# Die Einzelnen Einträge werden abgerufen
+y = low.pop(0)
+m = low.pop(0)
+d = low.pop(0)
+h = low.pop(0)
+m = low.pop(0)
+s = low.pop(0)
+
+
+print(y, m, d, h ,m, s)
