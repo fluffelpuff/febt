@@ -13,6 +13,26 @@ Tage gibt es Maximal 31, da reichen auch 5 bit.
 Monate gibt es 12, da reichen 4 Bit aus.
 Nur Jahre gibt es unbegrenzt deshalb an der stelle 3*6 Bits.
 
-(6 + 6 + 5 + 5 + 4 + (6*3)) / 8 = 5,5 bedeutet der ganze Timestamp passt in 6 Bytes anstelle von 8 Bytes. 😎
+(6 + 6 + 5 + 5 + 4 + (6*3)) / 8 = 5,5 bedeutet der ganze Timestamp passt in 6 Bytes anstelle von 8 Bytes.
 3 * 6 Bits = 2^(6*3) = 262.144 soviel Jahre ist es dann safe ohne angepasst zu werden.
+Die Angabe von Millisekunden ist nicht notwendig, da wir nur auf der Sekundenebene Arbeiten.
 '''
+import datetime
+
+
+# Die Aktuelle Uhrzeit wird als Datetime abgerufen
+now = datetime.datetime.now()
+
+# Der Datetime Wert wird Formatiert und gesplittet
+low = (now.strftime('%Y-%m-%d-%H-%M-%S')).split('-')
+
+# Die Einzelnen Einträge werden abgerufen
+y = low.pop(0)
+m = low.pop(0)
+d = low.pop(0)
+h = low.pop(0)
+m = low.pop(0)
+s = low.pop(0)
+
+
+print(y, m, d, h ,m, s)
