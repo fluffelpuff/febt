@@ -1,6 +1,5 @@
 import datetime
 
-
 # Die Aktuelle Uhrzeit wird als Datetime abgerufen
 now = datetime.datetime.now()
 
@@ -22,5 +21,7 @@ bited_d = "{0:b}".format(int(d))
 bited_h = "{0:b}".format(int(h))
 bited_m = "{0:b}".format(int(m))
 bited_s = "{0:b}".format(int(s))
+
+# Die Bitwerte werden aufbereitet
 
 print(bited_y, bited_m, bited_d, bited_h ,bited_m, bited_s)
