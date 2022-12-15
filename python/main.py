@@ -1,5 +1,6 @@
 import datetime
 
+
 # Erzeugt einen Byted Timestamp
 def get_current_timestamp():
     # Die Aktuelle Uhrzeit wird als Datetime abgerufen
@@ -7,6 +8,7 @@ def get_current_timestamp():
 
     # Der Datetime Wert wird Formatiert und gesplittet
     low = (now.strftime('%Y-%m-%d-%H-%M-%S')).split('-')
+    print(low)
 
     # Die Einzelnen Werte werden in Bits umgewandelt
     bited_year = "{0:b}".format(int(low.pop(0))).zfill(6*3)
@@ -24,6 +26,18 @@ def get_current_timestamp():
     return byted_value.hex()
 
 
+# Wandelt einen Hexed Timestamp in eine Zahl um
+def hex_timestamp_to_number(hex_number):
+    return int(f"0x{hex_number}", 16)
 
-current_timestamp = get_current_timestamp()
-print(current_timestamp)
+
+# Wandelt eine Zahl wieder in eine 
+def number_to_hex_value(num_value):
+    converted = hex(num_value)[2:]
+    return converted.zfill(12)
+
+
+inted_timestamp = hex_timestamp_to_number("001f9b1ed3ba")
+b_inted_tstamp = hex_timestamp_to_number("001f9b1ed3b4")
+total_c = number_to_hex_value(inted_timestamp - b_inted_tstamp)
+print(total_c)
