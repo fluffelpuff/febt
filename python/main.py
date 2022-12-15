@@ -8,7 +8,6 @@ def get_current_timestamp():
 
     # Der Datetime Wert wird Formatiert und gesplittet
     low = (now.strftime('%Y-%m-%d-%H-%M-%S')).split('-')
-    print(low)
 
     # Die Einzelnen Werte werden in Bits umgewandelt
     bited_year = "{0:b}".format(int(low.pop(0))).zfill(6*3)
@@ -37,7 +36,8 @@ def number_to_hex_value(num_value):
     return converted.zfill(12)
 
 
-inted_timestamp = hex_timestamp_to_number("001f9b1ed3ba")
+c_ts = get_current_timestamp()
+inted_timestamp = hex_timestamp_to_number(c_ts)
 b_inted_tstamp = hex_timestamp_to_number("001f9b1ed3b4")
-total_c = number_to_hex_value(inted_timestamp - b_inted_tstamp)
-print(total_c)
+total_c = number_to_hex_value(inted_timestamp + b_inted_tstamp)
+print(total_c, "001f9b1ed3b4", c_ts)
